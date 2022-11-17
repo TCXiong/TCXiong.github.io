@@ -1,0 +1,427 @@
+/*This animation does a fade in and squeeze/stretch
+Just add "animation: transitionIN 1.5s;" to the class.
+@keyframes transitionIN {
+    from {
+        opacity: 0;
+        transform: rotateX(-30deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0)
+    }
+}
+*/
+@keyframes fadeIn {
+    from {
+        transform: scale(0.95);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes scrollFadeIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(20px);
+        opacity: 1;
+    }
+}
+
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-100px);
+    }
+    50% {
+        opacity: 0;
+        transform: scale(0.95) translateY(-100px);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes dropIn2 {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(50px);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut2 {
+    from {
+        transform: translateY(50px) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-50px) scale(0.95);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInTimelinePoints {
+    from {
+        transform: translateY(4px) scale(0);
+    }
+    50% {
+        transform: translateY(4px) scale(0);
+    }
+    to {
+        transform: translateY(4px) scale(1);
+    }
+}
+
+@keyframes fadeInTimelineBar {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes pageLoad {
+    from {
+        transform: translateX(-20%) translateY(-20%) rotate(45deg);
+    }
+    to {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+.full-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.main-container {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.main {
+    /* border: 2px black solid; */
+    max-width: 900px;
+    margin: auto;
+    text-align:center;
+    justify-content: center;
+    user-select: none;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.smallspace {
+    margin-top: 5%;
+}
+.bigspace {
+    margin-top: 250px;
+}
+
+.page-title {
+    /*border: 20px black solid; */
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+    justify-content: center;
+    user-select: none;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.in-progress {
+    margin: auto;
+    display: flex;
+    user-select: none;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.in-progress-entry {
+    min-width: 350px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px 0px 20px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+
+
+.in-progress-entry p li {
+    font-size: 1.1em;
+}
+
+.in-progress h2 {
+    font-size: 3em;
+}
+
+/*
+.project {
+    width: 500px;
+    height: 300px;
+    margin: 50px;
+    background-color: orangered;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 4px 4px #2e2e2e;
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+*/
+
+/*
+.project.selected {
+    justify-content: left;
+}
+*/
+
+/*
+.project h3 {
+    transition: 0.5s;
+}
+
+.project:hover {
+    transform: scale(1.2);
+    box-shadow: 25px 25px 30px #888888; 
+}
+*/
+.skills-box {
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container h3 { 
+    font-size: 1.5em;
+}
+
+.fadeOut {
+    animation: fadeOut 0.6s forwards;
+}
+
+h1 {
+    font-size: 5.5em;
+    margin: 5px;
+    color: orangered;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 600;
+    margin: 5px;
+    word-spacing: 5px;
+}
+
+h3 {
+    font-size: 2.2em;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+
+a {
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+body {
+    margin: 0;
+    /*height: 100%; */
+    /* background-image: radial-gradient(white, #c4ffff); */
+    border: 1px solid transparent;
+    /* animation: pageLoad 5s; */
+}
+
+.links-box {
+    margin-top: 40px;
+    /* border: 5px black solid; */
+    display: flex;
+    justify-content: center;
+    /* width: auto; */
+    flex-wrap: wrap;
+}
+
+.double-arrow {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    animation: dropIn 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#resume-arrow {
+    position: absolute;
+    left: 47%;
+    transform: translateY(50px);
+    animation: dropIn2 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.circle-link {
+    /*border: 10px solid red;*/
+    border-radius: 50%;
+    height: 225px;
+    min-width: 225px;
+    max-width: 225px;
+    background-color: orangered;
+    /* background: linear-gradient(45deg, orangered, #ff9b00); */
+    color: white;
+    padding: 30px;
+    margin: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    box-shadow: 3px 3px 4px 4px #2e2e2e;
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.circle-link h4 {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.circle-link.ready:hover {
+    transform: scale(1.2);
+    box-shadow: 25px 25px 30px #888888;
+}
+
+.pageLoadBox {
+    height: 3800px;
+    width: 2500px;
+    background-color: white;
+    position: fixed;
+    box-shadow: 0px 0px 100px 10px white;
+    animation: pageLoad 5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    z-index: 1;
+}
+
+.aboutme-pic {
+    width: 250px;
+    border: 5px solid orangered;
+    border-radius: 25px;
+}
+
+.email {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+.email input[name="email"] {
+    width: 400px;
+    height: 40px;
+    font-size: 1.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 5px;
+    border: 1px solid gray;
+    transition: 0.5s;
+}
+
+.email input[name="email"]:focus {
+    background: gainsboro;
+    outline-color: grey;
+    outline-width: 0;
+    transform: scale(1.02);
+}
+
+.email textarea[name="message"] {
+    width: 1000px;
+    height: 200px;
+    font-size: 1.5em;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 5px;
+    border: 1px solid gray;
+    transition: 0.5s;
+    resize: none;
+}
+
+.email textarea[name="message"]:focus {
+    background: gainsboro;
+    outline-color: grey;
+    outline-width: 0;
+    transform: scale(1.01);
+}
+
+.email-part {
+    padding-bottom: 50px;
+}
+
+.email form input[name="submit"] {
+    background-color: orangered;
+    color: white;
+    border: 0;
+    width: 200px;
+    height: 50px;
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: 3px 3px 4px 4px #2e2e2e;
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+}
+
+.email form input[name="submit"]:hover {
+    transform: scale(1.2);
+    box-shadow: 25px 25px 30px #888888; 
+}
+
+
+
+/*
+h1, h2 {
+    margin-top: 60px;
+}
+*/
